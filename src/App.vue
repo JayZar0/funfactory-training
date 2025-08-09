@@ -1,22 +1,13 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
     <div class="wrapper">
-      <HomeView />
-
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/clean">Cleaning</RouterLink>
-        <RouterLink to="/front">Front</RouterLink>
-        <RouterLink to="/coach">Party Coaching</RouterLink>
-        <RouterLink to="/kcash">Kitchen Cash</RouterLink>
-        <RouterLink to="/cook">Cook</RouterLink>
+        <HomeView />
       </nav>
     </div>
   </header>

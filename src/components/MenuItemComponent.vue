@@ -1,25 +1,19 @@
 <!-- This component will be used as a selection for the menu items in the main menu -->
 <script setup lang="ts">
-import router from '@/router';
-import { Button } from 'primevue';
+import { RouterLink } from 'vue-router';
 
 /**
- * These are the constant parameters that are taken for the buttons
+ * Prop declarations
  */
-const location:string = ''
-const label:string = ''
+const { location, label } = defineProps<{
+    location: string,
+    label: string
+}>()
 
-/**
- * This function will redirect the user based if they press the button
- * @param location this is where the user will be redirected
- */
-function redirect () {
-    router.push(location)
-}
 </script>
 
 <template>
     <div>
-        <Button v-on:click="redirect" v-bind:label="label"></Button>
+        <RouterLink :to="location">{{label}}</RouterLink>
     </div>
 </template>
